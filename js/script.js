@@ -40,3 +40,8 @@ function send(t){if(!t.trim())return;say(t,"u");setTimeout(function(){say(reply(
 $("#qr").onclick=function(e){if(e.target.tagName=="BUTTON")send(e.target.textContent)};
 $("#cf").onsubmit=function(e){e.preventDefault();send($("#ci").value);$("#ci").value=""};
 $("#cb").onclick=function(){cw.classList.toggle("on");$("#cb").textContent=cw.classList.contains("on")?"✕":"💬"};
+
+/* Swipe left/right on a property carousel (touch screens) */
+var tx=null;
+document.addEventListener("touchstart",function(e){var c=e.target.closest(".car");tx=c?e.touches[0].clientX:null},{passive:true});
+document.addEventListener("touchend",function(e){if(tx===null)return;var c=e.target.closest(".car"),dx=e.changedTouches[0].clientX-tx;if(c&&Math.abs(dx)>40)go(+c.id.slice(1),dx<0?1:-1);tx=null});
