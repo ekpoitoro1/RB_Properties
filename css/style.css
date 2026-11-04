@@ -102,3 +102,17 @@ footer .wrap{flex-direction:column;text-align:center}
 #cw{left:10px;right:10px;width:auto;max-width:none;height:min(480px,calc(100dvh - 160px))}
 #cb{right:14px;width:54px;height:54px}
 }
+
+/* ===== WhatsApp ===== */
+.wb{background:#168a47;color:#fff}
+.wb:hover{background:#0f6b36;color:#fff}
+.body .btn+.btn{margin-top:8px}
+.wa{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:8px;background:#168a47;color:#fff;height:58px;padding:0 20px 0 16px;border-radius:30px;font-weight:700;font-size:15px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wa:hover{background:#0f6b36}
+.wa svg{width:28px;height:28px;fill:#fff;flex:none}
+.wal{display:block;text-align:center;padding:9px;font-size:13px;font-weight:600;color:var(--teal);border-top:1px solid var(--bd)}
+@media(max-width:640px){.wa{width:54px;height:54px;padding:0;justify-content:center;left:14px}.wa span{display:none}}
+
+/* Form error message and disabled button */
+.ok.err{background:#fdecea;color:#8a1f15}
+.btn:disabled{opacity:.65;cursor:not-allowed}
