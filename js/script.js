@@ -1,24 +1,10 @@
-/* RB Properties – listings data, carousel, filters, routing, enquiry form and live chat. */
-/* WhatsApp contact (international format, no + sign) */
-var WA="2349079063117";
-function scene(c,v){var a=c[0],b=c[1],i,s="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='"+b+"'/><stop offset='1' stop-color='#fff'/></linearGradient></defs>",
-R=function(x,y,w,h,f,r){return"<rect x='"+x+"' y='"+y+"' width='"+w+"' height='"+h+"' fill='"+f+"' rx='"+(r||0)+"'/>"},
-C=function(x,y,r,f){return"<circle cx='"+x+"' cy='"+y+"' r='"+r+"' fill='"+f+"'/>"},
-T=function(p,f){return"<polygon points='"+p+"' fill='"+f+"'/>"},
-S="url(#g)",W="#eef3f4",FL="#cdbfa8",DK="#073b46";
-switch(v){
-case 1:s+=R(0,0,600,375,W)+R(0,270,600,105,FL)+R(360,50,190,170,S)+R(60,180,260,90,a,14)+R(60,150,260,45,a,14)+R(370,235,160,20,"#8b6b4a",4)+R(390,255,8,40,"#8b6b4a")+R(500,255,8,40,"#8b6b4a")+C(120,80,22,"#fff");break;
-case 2:s+=R(0,0,600,375,S)+R(0,250,600,125,"#6aa383")+R(80,270,300,70,"#4fc3d6",10)+R(90,278,280,54,"#8fe0ec",8)+R(420,130,12,140,"#6b4f33")+"<ellipse cx='426' cy='125' rx='60' ry='22' fill='#2f7d5a'/>"+R(60,150,240,100,a)+R(50,140,260,14,DK);break;
-case 3:s+=R(0,0,600,375,W)+R(0,290,600,85,FL)+R(40,50,520,75,a,6)+R(40,195,520,95,a,6)+R(30,185,540,14,"#e2e6e8",3)+R(250,175,100,10,"#333")+R(160,300,280,55,b,6)+R(150,288,300,14,"#e2e6e8",3);for(i=1;i<5;i++)s+=R(40+i*104,50,2,75,W)+R(40+i*104,195,2,95,W);break;
-case 4:s+=R(0,0,600,375,W)+R(0,280,600,95,FL)+R(30,50,100,100,S,4)+R(170,100,260,100,a,8)+R(150,190,300,90,"#fff",8)+R(150,225,300,55,b,8)+R(190,175,90,30,"#fff",8)+R(320,175,90,30,"#fff",8)+R(90,200,45,80,"#8b6b4a",4)+R(465,200,45,80,"#8b6b4a",4)+R(450,60,100,70,b,4);break;
-case 5:s+=R(0,0,600,375,"#e6f1f3")+R(0,285,600,90,"#bcd0d4")+R(60,215,270,85,"#fff",30)+R(75,225,240,30,b,12)+R(400,60,130,150,S,6)+R(390,235,150,18,"#fff",6)+R(400,253,130,70,a,4);break;
-case 6:s+=R(0,0,600,375,W)+R(0,285,600,90,FL)+R(60,60,130,130,S,4)+R(298,0,4,70,"#555")+C(300,88,26,"#e7cf93")+R(150,210,300,16,"#8b6b4a",4)+R(180,226,12,70,"#8b6b4a")+R(408,226,12,70,"#8b6b4a")+R(120,210,14,80,a)+R(120,260,50,14,a)+R(466,210,14,80,a)+R(430,260,50,14,a);break;
-case 7:s+=R(0,0,600,375,S);for(i=0;i<9;i++)s+=R(i*70-10,110+(i*47%80),56,300,i%2?a:"#2a8a9a",2);s+=R(0,300,600,75,FL)+R(0,285,600,10,"#fff");break;
-case 8:s+=R(0,0,600,375,S)+R(0,300,600,75,"#8a8f94")+R(0,170,600,130,"#e6e0d6")+R(200,150,200,150,a,6);for(i=0;i<9;i++)s+=R(215+i*21,165,4,135,b);s+=R(30,255,130,35,"#b23a48",8)+R(55,232,80,28,"#b23a48",8)+C(60,292,13,"#222")+C(130,292,13,"#222");break;
-case 9:s+=R(0,0,600,375,S)+R(0,285,600,90,"#5d6468");for(i=0;i<6;i++)s+=R(20+i*100,325,50,6,"#fff");for(i=0;i<4;i++){var x=20+i*145;s+=R(x,165,120,120,i%2?a:"#c9b79c")+T((x-10)+",165 "+(x+60)+",110 "+(x+130)+",165",DK)+R(x+48,225,26,60,DK)+R(x+15,185,22,22,"#e9f6f8")+R(x+83,185,22,22,"#e9f6f8")}break;
-default:s+=R(0,0,600,375,S)+R(0,300,600,75,"#6aa383")+R(140,150,320,155,a)+T("120,150 300,70 480,150",DK);for(i=0;i<3;i++)s+=R(170+i*95,180,60,50,"#e9f6f8");s+=R(275,250,50,55,DK)+C(80,290,30,"#2f7d5a")+C(520,290,30,"#2f7d5a")}
-return"data:image/svg+xml,"+encodeURIComponent(s+"</svg>")}
-var L=["Exterior","Living room","Pool & garden","Kitchen","Master bedroom","Bathroom","Dining area","Balcony view","Compound & parking","Neighbourhood"],N=L.length;
+.k/* RB Properties – listings data, carousel, filters, routing, enquiry form and live chat. */
+function scene(c,v){var a=c[0],b=c[1],s="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='"+b+"'/><stop offset='1' stop-color='#fff'/></linearGradient></defs>",i,w="";
+if(v==1){s+="<rect width='600' height='375' fill='#eef3f4'/><rect y='270' width='600' height='105' fill='#c9b79c'/><rect x='360' y='50' width='190' height='170' fill='url(#g)' stroke='#fff' stroke-width='8'/><rect x='60' y='180' width='260' height='90' rx='14' fill='"+a+"'/><rect x='60' y='150' width='260' height='45' rx='14' fill='"+a+"' opacity='.8'/><rect x='370' y='235' width='160' height='20' rx='4' fill='#8b6b4a'/><rect x='390' y='255' width='8' height='40' fill='#8b6b4a'/><rect x='500' y='255' width='8' height='40' fill='#8b6b4a'/><circle cx='120' cy='80' r='22' fill='#fff' opacity='.8'/>"}
+else if(v==2){s+="<rect width='600' height='375' fill='url(#g)'/><rect y='250' width='600' height='125' fill='#6aa383'/><rect x='80' y='270' width='300' height='70' rx='10' fill='#4fc3d6'/><rect x='90' y='278' width='280' height='54' rx='8' fill='#8fe0ec' opacity='.6'/><rect x='420' y='130' width='12' height='140' fill='#6b4f33'/><ellipse cx='426' cy='125' rx='60' ry='22' fill='#2f7d5a'/><rect x='60' y='150' width='240' height='100' fill='"+a+"'/><rect x='50' y='140' width='260' height='14' fill='#073b46'/>"}
+else{s+="<rect width='600' height='375' fill='url(#g)'/><rect y='300' width='600' height='75' fill='#6aa383'/><rect x='140' y='150' width='320' height='155' fill='"+a+"'/><polygon points='120,150 300,70 480,150' fill='#073b46'/>";for(i=0;i<3;i++){w+="<rect x='"+(170+i*95)+"' y='180' width='60' height='50' fill='#e9f6f8' opacity='.9'/>"}s+=w+"<rect x='275' y='250' width='50' height='55' fill='#073b46'/><circle cx='80' cy='290' r='30' fill='#2f7d5a'/><circle cx='520' cy='290' r='30' fill='#2f7d5a'/>"}
+return"data:im.]age/svg+xml,"+encodeURIComponent(s+"</svg>")}
+var L=["Exterior","Interior","Outdoor"];
 var P=[
 {id:1,t:"Luxury 5-Bedroom Detached Duplex",ty:"House",st:"Sale",loc:"Lekki Phase 1",pr:"₦450,000,000",bd:5,ba:6,ar:"620 sqm",pk:4,c:["#0b6e7f","#9ed3dc"],f:["Swimming pool","BQ","Smart home","24/7 power"]},
 {id:2,t:"Modern 3-Bedroom Serviced Apartment",ty:"Apartment",st:"Rent",loc:"Victoria Island",pr:"₦12,000,000 / yr",bd:3,ba:3,ar:"210 sqm",pk:2,c:["#2d7f8c","#b5dde3"],f:["Gym","Elevator","Concierge","Backup power"]},
@@ -31,9 +17,9 @@ var B=[["Buying your first home: a 7-step checklist","Guide","#0b6e7f","Set a re
 ["Rent or buy? Weighing the numbers","Market","#2d7f8c","Compare your annual rent to the full cost of ownership, including maintenance, service charges and the opportunity cost of your deposit."],
 ["5 upgrades that raise your property value","Tips","#3a6f7a","Fresh paint, reliable power, modern kitchen fittings, good landscaping and clear photography consistently help properties sell faster."]];
 var $=function(s){return document.querySelector(s)},cur={};
-function card(p){var im="",dots="<i class='on'></i>"+"<i></i>".repeat(N-1);for(var i=0;i<N;i++)im+="<img loading='lazy' alt='"+p.t+" – "+L[i]+"' src=\""+(p.img&&p.img[i]||scene(p.c,i))+"\">";
-return"<article class='card'><div class='car'><span class='tag'>For "+p.st+"</span><span class='cap'>1/"+N+" · Exterior</span><div class='trk'>"+im+"</div><button class='pv' onclick='go(this,-1)' aria-label='Previous'>‹</button><button class='nx' onclick='go(this,1)' aria-label='Next'>›</button><div class='dots'>"+dots+"</div></div><div class='body'><div class='price'>"+p.pr+"</div><h3 style='font-size:18px;margin:0'>"+p.t+"</h3><div class='loc'>📍 "+p.loc+", Lagos · "+p.ty+"</div><div class='meta'>"+(p.bd?"<span>🛏 "+p.bd+" bed</span>":"")+(p.ba?"<span>🛁 "+p.ba+" bath</span>":"")+"<span>📐 "+p.ar+"</span>"+(p.pk?"<span>🚗 "+p.pk+"</span>":"")+"</div><div class='chips'>"+p.f.map(function(x){return"<span>"+x+"</span>"}).join("")+"</div><a class='btn' href='#contact' onclick='pick("+p.id+")'>Enquire about this property</a><a class='btn wb' target='_blank' rel='noopener' href='https://wa.me/"+WA+"?text="+encodeURIComponent("Hello RB Properties, I am interested in: "+p.t+" ("+p.loc+", "+p.pr+")")+"'>💬 Chat on WhatsApp</a></div></article>"}
-function go(b,d){var e=b.closest(".car"),n=((+e.dataset.i||0)+d+N)%N;e.dataset.i=n;e.querySelector(".trk").style.transform="translateX(-"+n*100+"%)";e.querySelector(".cap").textContent=(n+1)+"/"+N+" · "+L[n];e.querySelectorAll(".dots i").forEach(function(x,i){x.className=i==n?"on":""})}
+function card(p){var im="";for(var i=0;i<3;i++)im+="<img loading='lazy' alt='"+p.t+" – "+L[i]+"' src=\""+scene(p.c,i)+"\">";
+return"<article class='card'><div class='car'><span class='tag'>For "+p.st+"</span><span class='cap'>Exterior</span><div class='trk'>"+im+"</div><button class='pv' onclick='go(this,-1)' aria-label='Previous'>‹</button><button class='nx' onclick='go(this,1)' aria-label='Next'>›</button><div class='dots'><i class='on'></i><i></i><i></i></div></div><div class='body'><div class='price'>"+p.pr+"</div><h3 style='font-size:18px;margin:0'>"+p.t+"</h3><div class='loc'>📍 "+p.loc+", Lagos · "+p.ty+"</div><div class='meta'>"+(p.bd?"<span>🛏 "+p.bd+" bed</span>":"")+(p.ba?"<span>🛁 "+p.ba+" bath</span>":"")+"<span>📐 "+p.ar+"</span>"+(p.pk?"<span>🚗 "+p.pk+"</span>":"")+"</div><div class='chips'>"+p.f.map(function(x){return"<span>"+x+"</span>"}).join("")+"</div><a class='btn' href='#contact' onclick='pick("+p.id+")'>Enquire about this property</a></div></article>"}
+function go(b,d){var e=b.closest(".car"),n=((+e.dataset.i||0)+d+3)%3;e.dataset.i=n;e.querySelector(".trk").style.transform="translateX(-"+n*100+"%)";e.querySelector(".cap").textContent=L[n];e.querySelectorAll(".dots i").forEach(function(x,i){x.className=i==n?"on":""})}
 function pick(id){setTimeout(function(){$("#pp").value=id},50)}
 function render(){var t=$("#ft").value,s=$("#fs").value,l=$("#fl").value,r=P.filter(function(p){return(!t||p.ty==t)&&(!s||p.st==s)&&(!l||p.loc==l)});$("#all").innerHTML=r.map(card).join("");$("#none").style.display=r.length?"none":"block"}
 $("#feat").innerHTML=P.slice(0,3).map(card).join("");
@@ -44,22 +30,7 @@ $("#pp").innerHTML+=P.map(function(p){return"<option value='"+p.id+"'>"+p.t+" �
 $("#posts").innerHTML=B.map(function(b,i){return"<article class='card post'><div class='th' style='background:linear-gradient(135deg,"+b[2]+",#074957)'>"+b[1]+"</div><div class='body'><div class='loc'>Oct "+(14-i*3)+", 2026 · "+b[1]+"</div><h3 style='font-size:19px'>"+b[0]+"</h3><details><summary>Read more</summary><p>"+b[3]+"</p></details></div></article>"}).join("");
 function route(){var h=(location.hash||"#home").slice(1);if(!$("#"+h)||!$("#"+h).classList.contains("page"))h="home";document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id==h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});scrollTo(0,0)}
 addEventListener("hashchange",route);route();
-/* Enquiry form -> Formspree (sent in the background with fetch) */
-var FORM_URL="https://formspree.io/f/xkjjqooo";
-$("#ef").onsubmit=function(e){e.preventDefault();
-var f=this,btn=f.querySelector("button[type=submit]"),ok=$("#ok");
-if(f.dataset.busy)return; /* ignore extra submits while a request is running */
-var d=new FormData(f),sel=$("#pp"),pp=P.filter(function(p){return p.id==sel.value})[0],first=$("#n").value.trim().split(" ")[0];
-d.set("property",pp?pp.t+" ("+pp.loc+", "+pp.pr+")":"Not specified");
-d.set("_subject","New enquiry from RB Properties website");
-f.dataset.busy="1";btn.disabled=true;btn.textContent="Sending…";ok.innerHTML="";
-fetch(FORM_URL,{method:"POST",body:d,headers:{Accept:"application/json"}}).then(function(r){
-if(!r.ok)throw new Error("HTTP "+r.status);
-var m=document.createElement("div");m.className="ok";m.textContent="Thank you, "+first+"! Your enquiry has been received. An RB Properties agent will contact you within 24 hours.";ok.appendChild(m);f.reset();
-}).catch(function(){
-ok.innerHTML="<div class='ok err'>Sorry, we could not send your enquiry. Please try again, or <a href='https://wa.me/message/7QCA44QNSNOZO1' target='_blank' rel='noopener' style='text-decoration:underline'>chat with us on WhatsApp</a>.</div>";
-}).then(function(){delete f.dataset.busy;btn.disabled=false;btn.textContent="Send enquiry"});
-};
+$("#ef").onsubmit=function(e){e.preventDefault();$("#ok").innerHTML="<div class='ok'>Thank you, "+$("#n").value.split(" ")[0]+"! Your enquiry has been received. An RB Properties agent will contact you within 24 hours.</div>";this.reset()};
 var cw=$("#cw"),ms=$("#ms");
 function say(t,c){var d=document.createElement("div");d.className="m "+c;d.textContent=t;ms.appendChild(d);ms.scrollTop=ms.scrollHeight}
 function reply(q){q=q.toLowerCase();return/price|cost|how much/.test(q)?"Our listings range from ₦6.5M/yr rentals to ₦450M luxury homes. Tell me your budget and I will suggest options.":/rent/.test(q)?"We have rentals in Victoria Island, Ikeja GRA and Maryland. See the Properties page and filter by 'Rent'.":/buy|sale|sell/.test(q)?"Happy to help! Browse 'For Sale' listings, or use the enquiry form if you want to list your own property.":/view|visit|inspect/.test(q)?"Viewings can be booked Mon–Sat. Share your preferred date and property on the Contact page and we will confirm.":/hello|hi|hey/.test(q)?"Hello! How can I help you today?":"Thanks for your message! An agent will follow up shortly. For faster help, leave your details on the Contact page."}
