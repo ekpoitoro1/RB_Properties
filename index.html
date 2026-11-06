@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RB Properties | Homes, Apartments, Land &amp; Commercial Spaces</title>
-  <meta name="description" content="RB Properties is a trusted real estate company. Browse homes, apartments, land and commercial properties for sale and rent, or send us an enquiry.">
+  <title>Rentandbuy Properties LTD | Homes, Apartments, Land &amp; Commercial Spaces</title>
+  <meta name="description" content="Rentandbuy Properties LTD is a trusted real estate company. Browse homes, apartments, land and commercial properties for sale and rent, or send us an enquiry.">
   <meta name="theme-color" content="#0b6e7f">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b6e7f'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Georgia' font-weight='700' text-anchor='middle' fill='white'%3ERB%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
@@ -14,13 +14,15 @@
   <!-- ===== HEADER / NAVIGATION ===== -->
   <header>
     <div class="wrap nav">
-      <a class="logo" href="#home" aria-label="RB Properties home">
-        <i>RB</i><span>RB <small>Properties</small></span>
+      <a class="logo" href="#home" aria-label="Rentandbuy Properties LTD home">
+        <i class="mk" id="mk">RB</i><img class="lg" id="lg" data-b="Imgs/Logo/Rentandbuy_Properties_logo" data-mk="#mk" alt="Rentandbuy Properties LTD logo" hidden><span>Rentandbuy <small>Properties LTD</small></span>
       </a>
       <nav id="nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#listings">Properties</a>
         <a href="#blog">Blog</a>
+        <a href="#management">Management</a>
+        <a href="#partnerships">Partnerships</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -30,7 +32,7 @@
 
     <!-- ===== HOME PAGE ===== -->
     <div class="page" id="home">
-      <div class="hero">
+      <div class="hero" data-bg="Imgs/Carousel 1/Front View 1">
         <div class="wrap">
           <div class="eyebrow">Trusted real estate advisors</div>
           <h1>Find a home that fits your life, and your future.</h1>
@@ -61,12 +63,40 @@
 
       <section class="alt">
         <div class="wrap">
-          <div class="eyebrow">Why RB Properties</div>
+          <div class="eyebrow">Why Rentandbuy Properties LTD</div>
           <h2>Everything under one roof</h2>
           <div class="three">
             <div class="box"><div class="ic">🏠</div><h3>Buy &amp; Sell</h3><p>Accurate valuations, professional marketing and vetted buyers.</p></div>
             <div class="box"><div class="ic">🔑</div><h3>Rentals &amp; Management</h3><p>Tenant screening, rent collection and maintenance handled for you.</p></div>
             <div class="box"><div class="ic">📑</div><h3>Legal &amp; Documentation</h3><p>Title checks and transparent paperwork for a secure transaction.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Management teaser -->
+      <section>
+        <div class="wrap">
+          <div class="ceo">
+            <img class="ph" data-b="Imgs/CEO IMGS/CEO IMGS" data-mk="#hav" alt="Chief Executive Officer, Rentandbuy Properties LTD" hidden>
+            <div class="av lg" id="hav">👤</div>
+            <div>
+              <div class="eyebrow">Leadership</div>
+              <h2>Meet our management</h2>
+              <p>Behind every transaction is a team committed to honest advice, verified documents and a client-first approach. Get to know our CEO and management team.</p>
+              <a class="btn" href="#management">Meet the management</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partnerships banner -->
+      <section class="alt">
+        <div class="wrap">
+          <div class="cta">
+            <div class="eyebrow">Joint ventures &amp; partnerships</div>
+            <h2>Land owner, developer or investor?</h2>
+            <p>Partner with Rentandbuy Properties LTD on land and property development projects.</p>
+            <a class="btn" href="#partnerships">Explore partnerships</a>
           </div>
         </div>
       </section>
@@ -112,8 +142,169 @@
       <section>
         <div class="wrap">
           <div class="eyebrow">Insights</div>
-          <h2>The RB Properties Blog</h2>
+          <h2>The Rentandbuy Properties LTD Blog</h2>
           <div class="grid" id="posts"><!-- filled by script.js --></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== MANAGEMENT PAGE ===== -->
+    <div class="page" id="management">
+      <div class="hero pb" data-bg="Imgs/Carousel 3/Front View 3">
+        <div class="wrap">
+          <div class="eyebrow">Management</div>
+          <h1>The people behind Rentandbuy Properties LTD</h1>
+          <p>Leadership committed to honest advice, transparent dealings and lasting client relationships.</p>
+        </div>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="ceo">
+            <img class="ph" data-b="Imgs/CEO IMGS/CEO IMGS" data-mk="#cav" alt="Chief Executive Officer, Rentandbuy Properties LTD" hidden>
+            <div class="av lg" id="cav">👤</div>
+            <div>
+              <div class="eyebrow">Chief Executive Officer</div>
+              <!-- EDIT: replace the placeholder name and bio below -->
+              <h2>[CEO full name]</h2>
+              <p>As Chief Executive Officer, [CEO full name] leads Rentandbuy Properties LTD, setting the company's direction and overseeing its property sales, rentals, land transactions and development partnerships.</p>
+              <p>The company is committed to transparency, verified documentation and a client-first approach at every stage of a transaction.</p>
+              <p><a class="btn" href="#contact">Contact the CEO's office</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="eyebrow">What we stand for</div>
+          <h2>Our values</h2>
+          <div class="three">
+            <div class="box"><div class="ic">🤝</div><h3>Integrity</h3><p>Honest advice and fair dealings with every buyer, tenant, landowner and partner.</p></div>
+            <div class="box"><div class="ic">📑</div><h3>Transparency</h3><p>Verified titles and clear paperwork so clients know exactly what they are signing.</p></div>
+            <div class="box"><div class="ic">⭐</div><h3>Client first</h3><p>Responsive support from first enquiry to final handover.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="eyebrow">Our team</div>
+          <h2>Company personnel</h2>
+          <div class="grid">
+            <!-- EDIT: replace the placeholder text in each card -->
+            <article class="card"><div class="body" style="align-items:center;text-align:center"><div class="av">👤</div><h3>[Team member name]</h3><div class="loc">[Position]</div><p>[Short profile: experience and what this person does at the company.]</p></div></article>
+            <article class="card"><div class="body" style="align-items:center;text-align:center"><div class="av">👤</div><h3>[Team member name]</h3><div class="loc">[Position]</div><p>[Short profile: experience and what this person does at the company.]</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="cta">
+            <h2>Talk to our team</h2>
+            <p>We are happy to answer your questions about buying, renting, land and development.</p>
+            <a class="btn" href="#contact">Send an enquiry</a>
+            <a class="btn wb" href="https://wa.me/message/7QCA44QNSNOZO1" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== LANDS & PROPERTY DEVELOPMENT JOINT VENTURES PAGE ===== -->
+    <div class="page" id="partnerships">
+      <div class="hero pb" data-bg="Imgs/Corosel 2/Front View 2">
+        <div class="wrap">
+          <div class="eyebrow">Joint ventures &amp; partnerships</div>
+          <h1>Lands and property development partnerships</h1>
+          <p>We are seeking property developers, real estate investors, landowners and joint venture partners to deliver quality projects together.</p>
+          <p><button class="btn" type="button" onclick="document.getElementById('jf').scrollIntoView({behavior:'smooth'})">Submit a partnership enquiry</button></p>
+        </div>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="eyebrow">Why partner with us</div>
+          <h2>What Rentandbuy Properties LTD brings</h2>
+          <div class="three">
+            <div class="box"><div class="ic">📍</div><h3>Market knowledge</h3><p>Understanding of Lagos property demand, locations and pricing to guide project decisions.</p></div>
+            <div class="box"><div class="ic">📣</div><h3>Sales and marketing</h3><p>Professional marketing, a ready audience of buyers and tenants, and dedicated enquiry handling.</p></div>
+            <div class="box"><div class="ic">🏗️</div><h3>Project support</h3><p>Land sourcing, documentation checks and coordination from planning to handover.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="eyebrow">Partnership models</div>
+          <h2>Ways we can work together</h2>
+          <div class="three">
+            <div class="box"><h3>Joint venture development</h3><p>Combine land, capital and expertise to develop residential or commercial projects with agreed shares.</p></div>
+            <div class="box"><h3>Land-for-equity</h3><p>Landowners contribute land and receive an agreed stake in the completed development.</p></div>
+            <div class="box"><h3>Equity investment</h3><p>Investors fund a project and take part in its returns under a written agreement.</p></div>
+            <div class="box"><h3>Co-development of off-plan projects</h3><p>Shared development and pre-sales of apartments, terraces and estates.</p></div>
+            <div class="box"><h3>Sales and marketing partnerships</h3><p>We market and sell your completed or ongoing development.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="eyebrow">Who we are looking for</div>
+          <h2>Ideal partners</h2>
+          <div class="chips" style="margin-bottom:34px"><span>Property developers</span><span>Real estate investors</span><span>Landowners</span><span>Contractors</span><span>Financiers</span></div>
+          <div class="eyebrow">How it works</div>
+          <h2>A simple, transparent process</h2>
+          <div class="steps">
+            <div><h3>Introduction</h3><p>Tell us about your land, project or investment goals.</p></div>
+            <div><h3>Due diligence</h3><p>We review titles, location, feasibility and documents.</p></div>
+            <div><h3>Agreement</h3><p>Terms are agreed and set out in a signed legal agreement.</p></div>
+            <div><h3>Execution</h3><p>Development, marketing and sales begin.</p></div>
+            <div><h3>Delivery</h3><p>Handover and distribution as agreed.</p></div>
+          </div>
+          <p class="note" style="margin-top:24px">All partnerships are subject to due diligence and signed legal agreements. Nothing on this page is a guarantee of returns.</p>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="eyebrow">Get started</div>
+          <h2>Partnership enquiry</h2>
+          <div class="cgrid">
+            <div class="box">
+              <form id="jf" action="https://formspree.io/f/xkjjqooo" method="POST">
+                <div class="row">
+                  <div><label for="jn">Full name</label><input id="jn" name="name" required></div>
+                  <div><label for="jc">Company (if any)</label><input id="jc" name="company"></div>
+                </div>
+                <div class="row">
+                  <div><label for="je">Email</label><input id="je" name="email" type="email" required></div>
+                  <div><label for="jp">Phone</label><input id="jp" name="phone" type="tel" required></div>
+                </div>
+                <div class="row">
+                  <div>
+                    <label for="jt">I am a</label>
+                    <select id="jt" name="partner_type"><option>Property developer</option><option>Real estate investor</option><option>Landowner</option><option>Contractor / financier</option><option>Other</option></select>
+                  </div>
+                  <div><label for="jl">Project location</label><input id="jl" name="project_location" placeholder="e.g. Lekki, Lagos"></div>
+                </div>
+                <label for="jb">Estimated project size or budget</label>
+                <input id="jb" name="project_size_or_budget" placeholder="e.g. 2 hectares, or ₦500 million">
+                <label for="jm">Message</label>
+                <textarea id="jm" name="message" rows="5" required placeholder="Tell us about your land, project or investment interest…"></textarea>
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+                <p><button class="btn" type="submit">Send partnership enquiry</button></p>
+                <div id="jok" role="status"></div>
+              </form>
+            </div>
+            <div>
+              <div class="box">
+                <h3>Prefer to talk?</h3>
+                <p>📞 <a href="tel:+2349079063117">+234 907 906 3117</a><br>✉️ <a href="mailto:rentandbuyproperties.ng@gmail.com">rentandbuyproperties.ng@gmail.com</a></p>
+                <p><a class="btn wb" href="https://wa.me/2349079063117?text=Hello%20Rentandbuy%20Properties%20LTD%2C%20I%20am%20interested%20in%20a%20land%20or%20joint%20venture%20partnership." target="_blank" rel="noopener">💬 WhatsApp about a partnership</a></p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -164,7 +355,7 @@
             <div>
               <div class="box">
                 <h3>Visit or call us</h3>
-                <p>📍 Lagos, Nigeria<br>📞 +234 800 000 0000<br>💬 WhatsApp: +234 907 906 3117<br>✉️ hello@rbproperties.com</p>
+                <p>📍 Lagos, Nigeria<br>📞 <a href="tel:+2349079063117">+234 907 906 3117</a><br>💬 WhatsApp: +234 907 906 3117<br>✉️ <a href="mailto:rentandbuyproperties.ng@gmail.com">rentandbuyproperties.ng@gmail.com</a></p>
                 <p><b>Office hours</b><br>Mon–Fri 9:00–18:00<br>Sat 10:00–15:00</p>
                 <p>Prefer a quick answer? Use the chat button at the bottom right, or message us directly:</p>
                 <p><a class="btn wb" href="https://wa.me/message/7QCA44QNSNOZO1" target="_blank" rel="noopener">💬 Chat on WhatsApp</a></p>
@@ -180,17 +371,17 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="wrap">
-      <div><b style="color:#fff;font-size:18px">RB Properties</b><br>Honest advice. Quality homes.</div>
-      <div>© 2026 RB Properties. All rights reserved.</div>
+      <div><b style="color:#fff;font-size:18px">Rentandbuy Properties LTD</b><br>Honest advice. Quality homes.<br><span class="flinks"><a href="#management">Management</a><a href="#partnerships">Partnerships</a><a href="#contact">Contact</a></span></div>
+      <div>© 2026 Rentandbuy Properties LTD. All rights reserved.</div>
     </div>
   </footer>
 
   <!-- ===== LIVE CHAT WIDGET ===== -->
-  <!-- WhatsApp: opens a direct chat with RB Properties -->
+  <!-- WhatsApp: opens a direct chat with Rentandbuy Properties LTD -->
   <a id="wa" class="wa" href="https://wa.me/message/7QCA44QNSNOZO1" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>WhatsApp</span></a>
   <button id="cb" aria-label="Open chat">💬</button>
   <div id="cw" role="dialog" aria-label="Live chat">
-    <div class="t">RB Properties Chat<small>● Online, typically replies in minutes</small></div>
+    <div class="t">Rentandbuy Properties LTD Chat<small>● Online, typically replies in minutes</small></div>
     <div id="ms" aria-live="polite"></div>
     <div class="qr" id="qr"></div>
     <a class="wal" href="https://wa.me/message/7QCA44QNSNOZO1" target="_blank" rel="noopener">Prefer WhatsApp? Chat with an agent →</a>

@@ -1,6 +1,19 @@
-/* RB Properties – listings data, carousel, filters, routing, enquiry form and live chat. */
+/* Rentandbuy Properties LTD – listings data, carousel, filters, routing, enquiry form and live chat. */
 /* WhatsApp contact (international format, no + sign) */
 var WA="2349079063117";
+/* ===== Images (folder: Imgs) =====
+   Paths are WITHOUT file extension: the site tries jpg, jpeg, png, webp... automatically.
+   If a photo cannot be found, the original illustration is shown instead. */
+var IMG={c1:["Imgs/Carousel 1/Front View 1","Imgs/Carousel 1/Kitchen 1","Imgs/Carousel 1/Room 1"],
+c2:["Imgs/Corosel 2/Front View 2","Imgs/Corosel 2/Lobby 2","Imgs/Corosel 2/Room 2"],
+c3:["Imgs/Carousel 3/Front View 3","Imgs/Carousel 3/Room 3","Imgs/Carousel 3/Lobby 3"]};
+var EXT=["jpg","jpeg","png","webp","JPG","JPEG","PNG","jfif"],HASX=/\.\w{3,4}$/;
+function imgUrl(b,i){return encodeURI(b)+(HASX.test(b)?"":"."+EXT[i||0])}
+function imgErr(el){var i=(+el.dataset.x||0)+1;
+if(HASX.test(el.dataset.b)||i>=EXT.length){el.onerror=null;var p=P.filter(function(q){return q.id==el.dataset.p})[0];if(p)el.src=scene(p.c,+el.dataset.s);return}
+el.dataset.x=i;el.src=imgUrl(el.dataset.b,i)}
+function probe(b,ok,i){i=i||0;var m=new Image();m.onload=function(){ok(m.src)};m.onerror=function(){if(!HASX.test(b)&&i+1<EXT.length)probe(b,ok,i+1)};m.src=imgUrl(b,i)}
+
 function scene(c,v){var a=c[0],b=c[1],i,s="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='"+b+"'/><stop offset='1' stop-color='#fff'/></linearGradient></defs>",
 R=function(x,y,w,h,f,r){return"<rect x='"+x+"' y='"+y+"' width='"+w+"' height='"+h+"' fill='"+f+"' rx='"+(r||0)+"'/>"},
 C=function(x,y,r,f){return"<circle cx='"+x+"' cy='"+y+"' r='"+r+"' fill='"+f+"'/>"},
@@ -26,14 +39,17 @@ var P=[
 {id:4,t:"Prime Commercial Office Floor",ty:"Commercial",st:"Rent",loc:"Ikeja GRA",pr:"₦35,000,000 / yr",bd:0,ba:4,ar:"450 sqm",pk:12,c:["#3a6f7a","#c0dfe4"],f:["Open plan","Fibre ready","Elevator","Parking"]},
 {id:5,t:"Serviced Residential Land (600 sqm)",ty:"Land",st:"Sale",loc:"Ajah",pr:"₦65,000,000",bd:0,ba:0,ar:"600 sqm",pk:0,c:["#2f8a74","#bfe3d8"],f:["C of O","Dry land","Good road","Estate"]},
 {id:6,t:"Cozy 2-Bedroom Apartment",ty:"Apartment",st:"Rent",loc:"Maryland",pr:"₦6,500,000 / yr",bd:2,ba:2,ar:"120 sqm",pk:1,c:["#0f7a8c","#a9d9e1"],f:["Tiled","Water supply","Secure","Near mall"]}];
+P[0].img=IMG.c1;P[0].lbl=["Front view","Kitchen","Room"];
+P[1].img=IMG.c2;P[1].lbl=["Front view","Lobby","Room"];
+P[2].img=IMG.c3;P[2].lbl=["Front view","Room","Lobby"];
 var B=[["Buying your first home: a 7-step checklist","Guide","#0b6e7f","Set a realistic budget, check title documents, inspect at different times of day, and always use a verified agent. Budget an extra 10–15% for legal, agency and closing fees."],
 ["How to read a land title before you pay","Legal","#145d6b","Ask for the Certificate of Occupancy or deed, verify it at the land registry, and have an independent surveyor confirm boundaries before any payment."],
 ["Rent or buy? Weighing the numbers","Market","#2d7f8c","Compare your annual rent to the full cost of ownership, including maintenance, service charges and the opportunity cost of your deposit."],
 ["5 upgrades that raise your property value","Tips","#3a6f7a","Fresh paint, reliable power, modern kitchen fittings, good landscaping and clear photography consistently help properties sell faster."]];
 var $=function(s){return document.querySelector(s)},cur={};
-function card(p){var im="",dots="<i class='on'></i>"+"<i></i>".repeat(N-1);for(var i=0;i<N;i++)im+="<img loading='lazy' alt='"+p.t+" – "+L[i]+"' src=\""+(p.img&&p.img[i]||scene(p.c,i))+"\">";
-return"<article class='card'><div class='car'><span class='tag'>For "+p.st+"</span><span class='cap'>1/"+N+" · Exterior</span><div class='trk'>"+im+"</div><button class='pv' onclick='go(this,-1)' aria-label='Previous'>‹</button><button class='nx' onclick='go(this,1)' aria-label='Next'>›</button><div class='dots'>"+dots+"</div></div><div class='body'><div class='price'>"+p.pr+"</div><h3 style='font-size:18px;margin:0'>"+p.t+"</h3><div class='loc'>📍 "+p.loc+", Lagos · "+p.ty+"</div><div class='meta'>"+(p.bd?"<span>🛏 "+p.bd+" bed</span>":"")+(p.ba?"<span>🛁 "+p.ba+" bath</span>":"")+"<span>📐 "+p.ar+"</span>"+(p.pk?"<span>🚗 "+p.pk+"</span>":"")+"</div><div class='chips'>"+p.f.map(function(x){return"<span>"+x+"</span>"}).join("")+"</div><a class='btn' href='#contact' onclick='pick("+p.id+")'>Enquire about this property</a><a class='btn wb' target='_blank' rel='noopener' href='https://wa.me/"+WA+"?text="+encodeURIComponent("Hello RB Properties, I am interested in: "+p.t+" ("+p.loc+", "+p.pr+")")+"'>💬 Chat on WhatsApp</a></div></article>"}
-function go(b,d){var e=b.closest(".car"),n=((+e.dataset.i||0)+d+N)%N;e.dataset.i=n;e.querySelector(".trk").style.transform="translateX(-"+n*100+"%)";e.querySelector(".cap").textContent=(n+1)+"/"+N+" · "+L[n];e.querySelectorAll(".dots i").forEach(function(x,i){x.className=i==n?"on":""})}
+function card(p){var n=p.img?p.img.length:N,lb=p.lbl||L,im="",dots="<i class='on'></i>"+"<i></i>".repeat(n-1);for(var i=0;i<n;i++)im+=p.img?"<img loading='lazy' alt='"+p.t+" – "+lb[i]+"' data-b=\""+p.img[i]+"\" data-p='"+p.id+"' data-s='"+i+"' src=\""+imgUrl(p.img[i],0)+"\" onerror='imgErr(this)'>":"<img loading='lazy' alt='"+p.t+" – "+L[i]+"' src=\""+scene(p.c,i)+"\">";
+return"<article class='card'><div class='car' data-n='"+n+"' data-l='"+lb.join("|")+"'><span class='tag'>For "+p.st+"</span><span class='cap'>1/"+n+" · "+lb[0]+"</span><div class='trk'>"+im+"</div><button class='pv' onclick='go(this,-1)' aria-label='Previous'>‹</button><button class='nx' onclick='go(this,1)' aria-label='Next'>›</button><div class='dots'>"+dots+"</div></div><div class='body'><div class='price'>"+p.pr+"</div><h3 style='font-size:18px;margin:0'>"+p.t+"</h3><div class='loc'>📍 "+p.loc+", Lagos · "+p.ty+"</div><div class='meta'>"+(p.bd?"<span>🛏 "+p.bd+" bed</span>":"")+(p.ba?"<span>🛁 "+p.ba+" bath</span>":"")+"<span>📐 "+p.ar+"</span>"+(p.pk?"<span>🚗 "+p.pk+"</span>":"")+"</div><div class='chips'>"+p.f.map(function(x){return"<span>"+x+"</span>"}).join("")+"</div><a class='btn' href='#contact' onclick='pick("+p.id+")'>Enquire about this property</a><a class='btn wb' target='_blank' rel='noopener' href='https://wa.me/"+WA+"?text="+encodeURIComponent("Hello Rentandbuy Properties LTD, I am interested in: "+p.t+" ("+p.loc+", "+p.pr+")")+"'>💬 Chat on WhatsApp</a></div></article>"}
+function go(b,d){var e=b.closest(".car"),m=+e.dataset.n||N,lb=e.dataset.l?e.dataset.l.split("|"):L,n=((+e.dataset.i||0)+d+m)%m;e.dataset.i=n;e.querySelector(".trk").style.transform="translateX(-"+n*100+"%)";e.querySelector(".cap").textContent=(n+1)+"/"+m+" · "+lb[n];e.querySelectorAll(".dots i").forEach(function(x,i){x.className=i==n?"on":""})}
 function pick(id){setTimeout(function(){$("#pp").value=id},50)}
 function render(){var t=$("#ft").value,s=$("#fs").value,l=$("#fl").value,r=P.filter(function(p){return(!t||p.ty==t)&&(!s||p.st==s)&&(!l||p.loc==l)});$("#all").innerHTML=r.map(card).join("");$("#none").style.display=r.length?"none":"block"}
 $("#feat").innerHTML=P.slice(0,3).map(card).join("");
@@ -42,7 +58,7 @@ $("#fl").innerHTML+=locs.map(function(x){return"<option>"+x+"</option>"}).join("
 $("#pp").innerHTML+=P.map(function(p){return"<option value='"+p.id+"'>"+p.t+" – "+p.loc+"</option>"}).join("");
 ["#ft","#fs","#fl"].forEach(function(x){$(x).onchange=render});render();
 $("#posts").innerHTML=B.map(function(b,i){return"<article class='card post'><div class='th' style='background:linear-gradient(135deg,"+b[2]+",#074957)'>"+b[1]+"</div><div class='body'><div class='loc'>Oct "+(14-i*3)+", 2026 · "+b[1]+"</div><h3 style='font-size:19px'>"+b[0]+"</h3><details><summary>Read more</summary><p>"+b[3]+"</p></details></div></article>"}).join("");
-function route(){var h=(location.hash||"#home").slice(1);if(!$("#"+h)||!$("#"+h).classList.contains("page"))h="home";document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id==h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});scrollTo(0,0)}
+function route(){var h=(location.hash||"#home").slice(1);if(!$("#"+h)||!$("#"+h).classList.contains("page"))h="home";document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.id==h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});var an=$("#nav a.on"),nv=$("#nav");if(an&&nv.scrollWidth>nv.clientWidth)nv.scrollLeft=an.getBoundingClientRect().left-nv.getBoundingClientRect().left+nv.scrollLeft-(nv.clientWidth-an.offsetWidth)/2;scrollTo(0,0)}
 addEventListener("hashchange",route);route();
 /* Enquiry form -> Formspree (sent in the background with fetch) */
 var FORM_URL="https://formspree.io/f/xkjjqooo";
@@ -51,11 +67,11 @@ var f=this,btn=f.querySelector("button[type=submit]"),ok=$("#ok");
 if(f.dataset.busy)return; /* ignore extra submits while a request is running */
 var d=new FormData(f),sel=$("#pp"),pp=P.filter(function(p){return p.id==sel.value})[0],first=$("#n").value.trim().split(" ")[0];
 d.set("property",pp?pp.t+" ("+pp.loc+", "+pp.pr+")":"Not specified");
-d.set("_subject","New enquiry from RB Properties website");
+d.set("_subject","New enquiry from Rentandbuy Properties LTD website");
 f.dataset.busy="1";btn.disabled=true;btn.textContent="Sending…";ok.innerHTML="";
 fetch(FORM_URL,{method:"POST",body:d,headers:{Accept:"application/json"}}).then(function(r){
 if(!r.ok)throw new Error("HTTP "+r.status);
-var m=document.createElement("div");m.className="ok";m.textContent="Thank you, "+first+"! Your enquiry has been received. An RB Properties agent will contact you within 24 hours.";ok.appendChild(m);f.reset();
+var m=document.createElement("div");m.className="ok";m.textContent="Thank you, "+first+"! Your enquiry has been received. A Rentandbuy Properties LTD agent will contact you within 24 hours.";ok.appendChild(m);f.reset();
 }).catch(function(){
 ok.innerHTML="<div class='ok err'>Sorry, we could not send your enquiry. Please try again, or <a href='https://wa.me/message/7QCA44QNSNOZO1' target='_blank' rel='noopener' style='text-decoration:underline'>chat with us on WhatsApp</a>.</div>";
 }).then(function(){delete f.dataset.busy;btn.disabled=false;btn.textContent="Send enquiry"});
@@ -63,7 +79,7 @@ ok.innerHTML="<div class='ok err'>Sorry, we could not send your enquiry. Please 
 var cw=$("#cw"),ms=$("#ms");
 function say(t,c){var d=document.createElement("div");d.className="m "+c;d.textContent=t;ms.appendChild(d);ms.scrollTop=ms.scrollHeight}
 function reply(q){q=q.toLowerCase();return/price|cost|how much/.test(q)?"Our listings range from ₦6.5M/yr rentals to ₦450M luxury homes. Tell me your budget and I will suggest options.":/rent/.test(q)?"We have rentals in Victoria Island, Ikeja GRA and Maryland. See the Properties page and filter by 'Rent'.":/buy|sale|sell/.test(q)?"Happy to help! Browse 'For Sale' listings, or use the enquiry form if you want to list your own property.":/view|visit|inspect/.test(q)?"Viewings can be booked Mon–Sat. Share your preferred date and property on the Contact page and we will confirm.":/hello|hi|hey/.test(q)?"Hello! How can I help you today?":"Thanks for your message! An agent will follow up shortly. For faster help, leave your details on the Contact page."}
-say("Hi 👋 Welcome to RB Properties. How can we help?","b");
+say("Hi 👋 Welcome to Rentandbuy Properties LTD. How can we help?","b");
 $("#qr").innerHTML=["Book a viewing","Prices","Rentals","Sell my property"].map(function(x){return"<button>"+x+"</button>"}).join("");
 function send(t){if(!t.trim())return;say(t,"u");setTimeout(function(){say(reply(t),"b")},600)}
 $("#qr").onclick=function(e){if(e.target.tagName=="BUTTON")send(e.target.textContent)};
@@ -74,3 +90,26 @@ $("#cb").onclick=function(){cw.classList.toggle("on");$("#cb").textContent=cw.cl
 var tx=null;
 document.addEventListener("touchstart",function(e){var c=e.target.closest(".car");tx=c?e.touches[0].clientX:null},{passive:true});
 document.addEventListener("touchend",function(e){if(tx===null)return;var c=e.target.closest(".car"),dx=e.changedTouches[0].clientX-tx;if(c&&Math.abs(dx)>40)go(c,dx<0?1:-1);tx=null});
+
+/* ===== Partnership enquiry form -> Formspree (same endpoint, separate subject) ===== */
+$("#jf").onsubmit=function(e){e.preventDefault();
+var f=this,btn=f.querySelector("button[type=submit]"),ok=$("#jok");
+if(f.dataset.busy)return;
+var d=new FormData(f),first=$("#jn").value.trim().split(" ")[0];
+d.set("_subject","New partnership enquiry from Rentandbuy Properties LTD website");
+f.dataset.busy="1";btn.disabled=true;btn.textContent="Sending…";ok.innerHTML="";
+fetch(FORM_URL,{method:"POST",body:d,headers:{Accept:"application/json"}}).then(function(r){
+if(!r.ok)throw new Error("HTTP "+r.status);
+var m=document.createElement("div");m.className="ok";m.textContent="Thank you, "+first+"! Your partnership enquiry has been received. Our team will contact you shortly.";ok.appendChild(m);f.reset();
+}).catch(function(){
+ok.innerHTML="<div class='ok err'>Sorry, we could not send your enquiry. Please try again, or <a href='https://wa.me/message/7QCA44QNSNOZO1' target='_blank' rel='noopener' style='text-decoration:underline'>chat with us on WhatsApp</a>.</div>";
+}).then(function(){delete f.dataset.busy;btn.disabled=false;btn.textContent="Send partnership enquiry"});
+};
+
+/* ===== Logo, CEO photo and banner photos (static elements) ===== */
+document.querySelectorAll("img[data-b]").forEach(function(el){
+el.onload=function(){el.hidden=false;if(el.dataset.mk){var m=$(el.dataset.mk);if(m)m.hidden=true}
+if(el.id=="lg"){var fi=document.querySelector("link[rel=icon]");if(fi){fi.removeAttribute("type");fi.href=el.src}}};
+el.onerror=function(){imgErr(el)};el.src=imgUrl(el.dataset.b,0)});
+document.querySelectorAll(".hero[data-bg]").forEach(function(el){probe(el.dataset.bg,function(u){
+el.style.backgroundImage="linear-gradient(135deg,rgba(7,73,87,.9),rgba(11,110,127,.8)),url('"+u+"')";el.style.backgroundSize="cover";el.style.backgroundPosition="center"})});

@@ -1,4 +1,4 @@
-/* RB Properties – main stylesheet. Brand colours are CSS variables in :root (teal blue = --teal). */
+/* Rentandbuy Properties LTD – main stylesheet. Brand colours are CSS variables in :root (teal blue = --teal). */
 :root{--teal:#0b6e7f;--teal-d:#074957;--on:#fff;--tint:#e8f3f5;--bg:#fff;--surf:#f4f8f9;--tx:#12262b;--mut:#566c72;--bd:#d6e3e6;--gold:#b8923a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#34b0c4;--teal-d:#0f3a44;--on:#04222a;--tint:#12313a;--bg:#0c1a1e;--surf:#112328;--tx:#e6f1f3;--mut:#9ab3b9;--bd:#223a41;--gold:#d8b45e}}
 :root[data-theme="dark"]{--teal:#34b0c4;--teal-d:#0f3a44;--on:#04222a;--tint:#12313a;--bg:#0c1a1e;--surf:#112328;--tx:#e6f1f3;--mut:#9ab3b9;--bd:#223a41;--gold:#d8b45e}
@@ -116,3 +116,29 @@ footer .wrap{flex-direction:column;text-align:center}
 /* Form error message and disabled button */
 .ok.err{background:#fdecea;color:#8a1f15}
 .btn:disabled{opacity:.65;cursor:not-allowed}
+
+/* ===== Logo, management and partnership pages ===== */
+[hidden]{display:none!important}
+.logo img{height:40px;width:auto;max-width:170px;object-fit:contain;background:#fff;border-radius:6px;padding:2px}
+.hero.pb{padding:56px 0}
+.ceo{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:40px;align-items:center}
+.ph{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;border:1px solid var(--bd);box-shadow:0 10px 30px rgba(7,73,87,.15)}
+.av{width:96px;height:96px;border-radius:50%;background:var(--tint);color:var(--teal);display:grid;place-items:center;font-size:40px;margin:0 auto 8px}
+.av.lg{width:100%;height:auto;aspect-ratio:4/5;border-radius:16px;font-size:80px;margin:0}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px}
+.steps>div{counter-increment:s;background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.steps>div:before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--teal);color:var(--on);font-weight:700;margin-bottom:8px}
+.steps h3{font-size:17px}.steps p{margin:0;color:var(--mut);font-size:14px}
+.note{font-size:13px;color:var(--mut);border-left:3px solid var(--gold);padding:10px 14px;background:var(--surf)}
+.cta .eyebrow{color:#e7cf93}
+.cta .btn+.btn{margin-left:8px}
+.flinks{display:inline-flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.flinks a,.box p a{text-decoration:underline}
+@media(max-width:800px){.ceo{grid-template-columns:1fr}.ph,.av.lg{max-width:360px;margin:0 auto}}
+@media(max-width:640px){
+nav{overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;padding:10px 12px}
+.logo{font-size:16px}.logo img{height:34px;max-width:130px}
+.cta .btn+.btn{margin:10px 0 0}.cta .btn{display:block}
+}

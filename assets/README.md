@@ -1,6 +1,6 @@
-# RB Properties Website
+# Rentandbuy Properties LTD Website
 
-A responsive, front-end website for **RB Properties**, a real estate company. Built with plain HTML, CSS and JavaScript, so there is nothing to install or build.
+A responsive, front-end website for **Rentandbuy Properties LTD**, a real estate company. Built with plain HTML, CSS and JavaScript, so there is nothing to install or build.
 
 ## Pages and features
 
@@ -10,6 +10,8 @@ A responsive, front-end website for **RB Properties**, a real estate company. Bu
 - **Contact**: enquiry form that collects name, phone, email, interest, property and message. The "Enquire" button on each listing pre-selects that property.
 - **Live chat**: floating chat widget with quick-reply buttons and automatic answers.
 - **WhatsApp**: floating WhatsApp button, a link inside the chat window, a button on the Contact page, and a "Chat on WhatsApp" button on every listing that opens a chat with the property details pre-filled.
+- **Management**: CEO profile (photo, bio) and two company personnel cards. Edit the `[placeholders]` in the `#management` section of `index.html`.
+- **Partnerships**: lands and property development joint-venture page for developers, investors and landowners, with its own enquiry form (same Formspree endpoint, subject "New partnership enquiry").
 - **Design**: teal blue brand colour, responsive layout, and automatic light and dark themes.
 
 ## Project structure
@@ -50,4 +52,11 @@ Open `index.html` in a browser. No build step or server is needed.
 
 ## License
 
-All rights reserved by RB Properties unless stated otherwise.
+All rights reserved by Rentandbuy Properties LTD unless stated otherwise.
+
+
+## Images (`Imgs/` folder)
+
+Image paths are listed at the top of `js/script.js` (the `IMG` object) and as `data-b` attributes in `index.html`, **without file extensions**. The site tries `.jpg`, `.jpeg`, `.png`, `.webp` and others automatically. Folder and file names must match exactly (Vercel is case-sensitive). If a photo is not found, the original illustration is shown instead.
+
+Expected files: `Imgs/Carousel 1/` (Front View 1, Kitchen 1, Room 1), `Imgs/Corosel 2/` (Front View 2, Lobby 2, Room 2), `Imgs/Carousel 3/` (Front View 3, Room 3, Lobby 3), `Imgs/Logo/Rentandbuy_Properties_logo`, `Imgs/CEO IMGS/CEO IMGS`.
