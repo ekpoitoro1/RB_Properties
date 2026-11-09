@@ -142,3 +142,15 @@ nav a{flex:0 0 auto;padding:10px 12px}
 .logo{font-size:16px}.logo img{height:34px;max-width:130px}
 .cta .btn+.btn{margin:10px 0 0}.cta .btn{display:block}
 }
+
+/* ===== Services page; compact menu on tablets (7 links) ===== */
+.sv .ic{width:46px;height:46px;border-radius:10px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.sv h3{margin:4px 0 0;font-size:19px}
+.sv p{margin:0;color:var(--mut)}
+.sv ul{margin:4px 0 12px;padding-left:18px;color:var(--mut);font-size:14px}
+@media(max-width:1180px){
+.nav{height:auto;padding:8px 20px;flex-wrap:wrap;gap:6px}
+nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto}
+}

@@ -10,6 +10,7 @@ A responsive, front-end website for **Rentandbuy Properties LTD**, a real estate
 - **Contact**: enquiry form that collects name, phone, email, interest, property and message. The "Enquire" button on each listing pre-selects that property.
 - **Live chat**: floating chat widget with quick-reply buttons and automatic answers.
 - **WhatsApp**: floating WhatsApp button, a link inside the chat window, a button on the Contact page, and a "Chat on WhatsApp" button on every listing that opens a chat with the property details pre-filled.
+- **Services**: Our Services page (sales, rentals and leases, property finding, interior and exterior design, solar and CCTV, cleaning, other services). Edit the `SV` list at the bottom of `js/script.js`. Each card has an enquiry button that pre-fills the contact form, and a WhatsApp button.
 - **Management**: CEO profile (photo, bio) and two company personnel cards. Edit the `[placeholders]` in the `#management` section of `index.html`.
 - **Partnerships**: lands and property development joint-venture page for developers, investors and landowners, with its own enquiry form (same Formspree endpoint, subject "New partnership enquiry").
 - **Design**: teal blue brand colour, responsive layout, and automatic light and dark themes.

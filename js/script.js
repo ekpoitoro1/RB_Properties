@@ -113,3 +113,15 @@ if(el.id=="lg"){var fi=document.querySelector("link[rel=icon]");if(fi){fi.remove
 el.onerror=function(){imgErr(el)};el.src=imgUrl(el.dataset.b,0)});
 document.querySelectorAll(".hero[data-bg]").forEach(function(el){probe(el.dataset.bg,function(u){
 el.style.backgroundImage="linear-gradient(135deg,rgba(7,73,87,.9),rgba(11,110,127,.8)),url('"+u+"')";el.style.backgroundSize="cover";el.style.backgroundPosition="center"})});
+
+/* ===== Our Services page (edit the text below) ===== */
+var SV=[
+{i:"🏡",t:"Property Sales",k:"Buying",d:"Buy or sell homes, land and commercial property with clear pricing and proper documentation.",f:["Residential, commercial and land","Professional marketing of your property","Document checks and guidance"]},
+{i:"🔑",t:"Rentals and Leases",k:"Renting",d:"Flexible options to suit short visits, longer stays and business needs.",f:["Shortlet rentals","Long-stay rentals","Lease of residential and commercial property"]},
+{i:"🔎",t:"Property Finding",k:"Other",d:"Tell us your budget, location and requirements and we find suitable options for you.",f:["Needs and budget assessment","Shortlisting and arranging viewings","Negotiation support"]},
+{i:"🎨",t:"Interior and Exterior Design",k:"Other",d:"Plan and improve the look and function of your home, office or rental property.",f:["Interior styling and space planning","Exterior finishes and landscaping","Renovation coordination"]},
+{i:"☀️",t:"Solar and CCTV Installation",k:"Other",d:"Keep your property powered and secure.",f:["Solar power systems","CCTV and security camera installation","Site assessment and recommendations"]},
+{i:"🧹",t:"Cleaning Services",k:"Other",d:"Professional cleaning to keep your property in top condition.",f:["Home and office cleaning","Post-construction cleaning","Move-in, move-out and shortlet turnover"]},
+{i:"🛠️",t:"Other Related Services",k:"Property management",d:"Support for owners, landlords and investors.",f:["Property management","Valuation and documentation support","Maintenance and repairs"]}];
+function svcPick(a){var m=$("#m");if(!m.value||m.dataset.auto){m.value="I would like to enquire about your "+a.dataset.t+" service.";m.dataset.auto="1"}$("#k").value=a.dataset.k}
+$("#svc").innerHTML=SV.map(function(s){return"<article class='card sv'><div class='body'><div class='ic'>"+s.i+"</div><h3>"+s.t+"</h3><p>"+s.d+"</p><ul>"+s.f.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul><a class='btn' href='#contact' data-t=\""+s.t+"\" data-k=\""+s.k+"\" onclick='svcPick(this)'>Enquire about this service</a><a class='btn wb' target='_blank' rel='noopener' href='https://wa.me/"+WA+"?text="+encodeURIComponent("Hello Rentandbuy Properties LTD, I would like to enquire about your "+s.t+" service.")+"'>💬 Chat on WhatsApp</a></div></article>"}).join("");
